@@ -4,10 +4,12 @@
   --white-color: #ffffff;
   --black-color: #000000;
   --background: #ffffff;
+  --background-hero: #c4c4c4;
   --background-hero-footer: #2f303a;
   --accent-color: #2196f3;
   --footer-color-contacts: rgba(255, 255, 255, 0.6);
   --background-color-btn: #f5f4fa;
+  --background-grey-new: #afb1b8;
 }
 
 /*------------- studio.html------------ */
@@ -107,7 +109,7 @@ img {
   display: flex;
   flex-direction: row-reverse;
   gap: 10px;
-  justify-content: center;
+  align-items: center;
 }
 .header-contacts-list {
   display: flex;
@@ -146,7 +148,7 @@ img {
 
 /* ----------Основное содержание Студия-------- */
 .hero {
-  background-color: var(--background-hero-footer);
+  background-color: var(--background-hero);
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -160,7 +162,7 @@ img {
     ),
     url(../images/hero-bg.jpg);
   max-width: 1600px;
-  height: 600px;
+
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
@@ -222,7 +224,7 @@ img {
   text-transform: uppercase;
   color: var(--secondary-text-color);
   margin-bottom: 10px;
-  padding-top: 30px;
+  margin-top: 30px;
 }
 .advantage-icon-item {
   height: 120px;
@@ -231,6 +233,9 @@ img {
   padding-bottom: 25px;
   background: var(--background-color-btn);
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .advantage-description {
@@ -238,11 +243,11 @@ img {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
-.advantage-icon {
+/* .advantage-icon {
   display: block;
   align-items: center;
-  margin: 0px 100px;
-}
+  margin: 0px 100px; 
+}*/
 .specialization {
   padding-bottom: 94px;
 }
@@ -327,7 +332,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--primary-text-color);
+  color: var(--background-grey-new);
 }
 
 .member-sm-icon {
@@ -385,7 +390,7 @@ img {
   height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  color: var(--primary-text-color);
+  color: var(--background-grey-new);
 }
 .clients-icon {
   fill: currentColor;
@@ -399,18 +404,22 @@ img {
   background-color: var(--background-hero-footer);
   padding-top: 60px;
   padding-bottom: 60px;
-  padding-left: 215px;
-  padding-right: 878px;
-  gap: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
 }
 
-.footer-adress-list {
+.footer-contacts {
+  display: flex;
+  align-items: baseline;
+  gap: 70px;
+}
+
+.footer-main-contats {
+  display: inline-block;
+}
+
+.footer-social-link {
+  width: 206px;
   padding: 0;
   margin: 0px;
-  max-width: 231px;
 }
 
 .footer-logo {
@@ -469,11 +478,6 @@ img {
   color: var(--accent-color);
 }
 
-.footer-social-link {
-  width: 206px;
-  padding: 0;
-  margin: 0px;
-}
 .sm-title {
   margin-bottom: 20px;
   color: var(--white-color);
@@ -491,8 +495,6 @@ img {
   width: 44px;
   height: 44px;
   display: block;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
 }
 .footer-social-icon {
   width: 100%;
@@ -500,7 +502,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
   color: var(--white-color);
 }
 
@@ -508,8 +511,8 @@ img {
   fill: currentColor;
 }
 
-.footer-social-item:hover,
-.footer-social-item:focus {
+.footer-social-icon:hover,
+.footer-social-icon:focus {
   background-color: var(--accent-color);
 }
 
@@ -539,7 +542,6 @@ img {
   color: var(--secondary-text-color);
   border-color: transparent;
   padding: 6px 22px;
-  background: var(--background-color-btn);
   border-radius: 4px;
 }
 .portfolio {
@@ -554,8 +556,8 @@ img {
   background-color: var(--accent-color);
   color: var(--white-color);
   cursor: pointer;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-list {
   margin-bottom: 50px;
@@ -566,7 +568,6 @@ img {
   margin-right: 8px;
 }
 .portfolio-link {
-  border: 1px solid #eeeeee;
   display: block;
 }
 
